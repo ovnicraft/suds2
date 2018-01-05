@@ -673,21 +673,21 @@ if it ever gets revived again.
 
 """
 
-package_name = "suds-jurko"
+package_name = "suds2"
 version_tag = safe_version(__version__)
-project_url = "http://bitbucket.org/jurko/suds"
-base_download_url = project_url + "/downloads"
-download_distribution_name = "%s-%s.tar.bz2" % (package_name, version_tag)
+project_url = "https://github.com/ovnicraft/suds2"
+base_download_url = project_url + "/archive"
+download_distribution_name = "%s-%s.tar.gz" % (package_name, version_tag)
 download_url = "%s/%s" % (base_download_url, download_distribution_name)
 
-maintainer="Jurko Gospodnetić"
+maintainer = "Cristian Salamea"
 if can_not_use_non_ASCII_meta_data:
     maintainer = unicode2ascii(maintainer)
 
 setup(
     name=package_name,
     version=__version__,
-    description="Lightweight SOAP client (Jurko's fork)",
+    description="Lightweight SOAP client (Suds fork)",
     long_description=long_description,
     keywords=["SOAP", "web", "service", "client"],
     url=project_url,
@@ -697,15 +697,16 @@ setup(
     author="Jeff Ortel",
     author_email="jortel@redhat.com",
     maintainer=maintainer,
-    maintainer_email="jurko.gospodnetic@pke.hr",
+    maintainer_email="cristian.salamea@gmail.com",
 
     # See PEP-301 for the classifier specification. For a complete list of
     # available classifiers see
     # 'http://pypi.python.org/pypi?%3Aaction=list_classifiers'.
-    classifiers=["Development Status :: 5 - Production/Stable",
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: "
-            "GNU Library or Lesser General Public License (LGPL)",
+        "GNU Library or Lesser General Public License (LGPL)",
         "Natural Language :: English",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
@@ -719,6 +720,8 @@ setup(
         "Programming Language :: Python :: 3.2",
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
         "Topic :: Internet"],
 
     # PEP-314 states that, if possible, license & platform should be specified
